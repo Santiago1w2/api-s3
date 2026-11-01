@@ -1,4 +1,4 @@
-org: santiagomorales
+org: geraldocolchado
 service: api-s3
 
 provider:
@@ -8,7 +8,7 @@ provider:
   memorySize: 256
   timeout: 20
   iam:
-    role: arn:aws:iam::369907334103:role/LabRole
+    role: arn:aws:iam::447891120606:role/LabRole
 
 functions:
   lista_buckets:
@@ -28,3 +28,28 @@ functions:
           method: post
           cors: true
           integration: lambda
+  crear_bucket:
+    handler: crear_bucket.lambda_handler
+    events:
+      - http:
+          path: /s3/bucket/crear-bucket
+          method: post
+          cors: true
+          integration: lambda
+  crear_directorio_bucket:
+    handler: crear_directorio_bucket.lambda_handler
+    events:
+      - http:
+          path: /s3/bucket/crear-directorio-bucket
+          method: post
+          cors: true
+          integration: lambda
+  subir_archivo_bucket:
+    handler: subir_archivo_bucket.lambda_handler
+    events:
+      - http:
+          path: /s3/bucket/subir-archivo-bucket
+          method: post
+          cors: true
+          integration: lambda
+
