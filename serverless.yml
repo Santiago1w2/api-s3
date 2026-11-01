@@ -1,4 +1,4 @@
-org: geraldocolchado
+org: santiagomorales
 service: api-s3
 
 provider:
@@ -8,7 +8,7 @@ provider:
   memorySize: 256
   timeout: 20
   iam:
-    role: arn:aws:iam::447891120606:role/LabRole
+    role: arn:aws:iam::369907334103:role/LabRole
 
 functions:
   lista_buckets:
