@@ -51,5 +51,5 @@ functions:
           path: /s3/bucket/subir-archivo-bucket
           method: post
           cors: true
-          integration: lambda
+          integration: lambda-proxy
 
