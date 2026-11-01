@@ -7,6 +7,9 @@ provider:
   # Default memory size for functions (default: 256MB)
   memorySize: 256
   timeout: 20
+  apiGateway:
+    binaryMediaTypes:
+      - multipart/form-data
   iam:
     role: arn:aws:iam::369907334103:role/LabRole
 
